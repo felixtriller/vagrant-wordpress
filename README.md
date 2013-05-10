@@ -1,0 +1,4 @@
+Vagrant WordPress environment
+=============================
+
+

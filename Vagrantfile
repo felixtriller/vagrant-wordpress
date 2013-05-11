@@ -68,7 +68,6 @@ Vagrant.configure("2") do |config|
       },
       :wordpress => {
         :version    => "latest",
-        :checksum   => "",
         :dir        => "/var/www",
         :db => {
           :database   => "wordpress",

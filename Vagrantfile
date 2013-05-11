@@ -1,8 +1,8 @@
 Vagrant::Config.run do |config|
 
     # Ubuntu 12.04 LTS
-    wp_config.vm.box = "precise32"
-    wp_config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+    config.vm.box = "precise32"
+    config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
     # Forward HTTP and MySQL of the guest system
     config.vm.forward_port 80,   8080  # http

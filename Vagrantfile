@@ -34,8 +34,8 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
-  config.vm.synced_folder "themes/", "/var/www/wordpress/wp-content/themes"
-  config.vm.synced_folder "plugins/", "/var/www/wordpress/wp-content/plugins"
+  config.vm.synced_folder "themes/", "/var/www/wp-content/themes"
+  config.vm.synced_folder "plugins/", "/var/www/wp-content/plugins"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -56,6 +56,7 @@ Vagrant.configure("2") do |config|
     chef.cookbooks_path = "cookbooks"
 
     chef.add_recipe "apt"
+    chef.add_recipe "build-essential"
     chef.add_recipe "git"
     chef.add_recipe "subversion"
     chef.add_recipe "wordpress"
